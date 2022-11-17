@@ -170,9 +170,11 @@ color: var(--brand-color);
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)), 
         url(../images/hero_bgi.jpg);
-    background-size: 1600px;
+    /* background-size: 1600px; */
+    max-width: 1600px;
     background-repeat: no-repeat;
     background-size: cover;
+    margin: 0 auto;
 }
 .main-title {
     margin-bottom: 20px;
@@ -198,6 +200,7 @@ color: var(--brand-color);
     font-size: 16px;
     line-height: 1.88;
     background-color: var(--brand-color);
+    border: none;
     border-radius: 4px;
     background-color: var(--brand-color);
     letter-spacing: 0.06em;
@@ -344,11 +347,11 @@ color: var(--brand-color);
    
     border-radius: 50%;
     box-shadow: none;
-    fill: var(--secondary-text-color);
+    fill: var(--client-color);
     background-color: var(--secondary-color);
 }
-.social-link:hover .item,
-.social-link:focus .item {
+.social-link .item:hover,
+.social-link .item:focus {
     background-color: var(--brand-color);
     fill: var(--secondary-color);
 }
@@ -410,10 +413,11 @@ color: var(--brand-color);
 .footer-black-logo {
     color: var(--secondary-color);
 }
-.footer-adress .item {
+.footer-adress .item:not(:last-child) {
     margin-top: 0;
     margin-bottom: 9px;
 }
+
 .footer .logo {
     padding: 0;
 }
@@ -462,7 +466,7 @@ color: var(--brand-color);
 }
 .footer-container {
     display: flex;
-    gap: 70px;
+    /* gap: 70px; */
 }
 .join {
     margin-bottom: 20px;
@@ -471,6 +475,9 @@ color: var(--brand-color);
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--secondary-color);
+}
+.footer-social-links {
+    margin-left: 70px;
 }
 .social-links-list .footer-item {
     display: flex; 
@@ -486,8 +493,8 @@ color: var(--brand-color);
     fill: var(--secondary-color);
     background-color:  rgba(255, 255, 255, 0.1);
 }
-.social-link:hover .footer-item,
-.social-link:focus .footer-item {
+.social-link .footer-item:hover,
+.social-link .footer-item:focus {
     background-color: var(--brand-color);
 }
 
@@ -538,7 +545,15 @@ color: var(--brand-color);
     display: flex;
     flex-wrap: wrap;
 }
-.project-list .item:hover {
+/* .project-list .item:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+} */
+.project-link{
+    text-decoration: none;
+    color: var(--main-color);
+}
+.project-link:hover,
+.project-link:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .project-list .item {
